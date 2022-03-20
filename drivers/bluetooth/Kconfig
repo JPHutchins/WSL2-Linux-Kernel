@@ -23,10 +23,11 @@ config BT_HCIBTUSB
 	tristate "HCI USB driver"
 	depends on USB
 	select BT_INTEL
+    default m
 	help
 	  Bluetooth HCI USB driver.
 	  This driver is required if you want to use Bluetooth devices with
-	  USB interface.
+	  USB interface
 
 	  Say Y here to compile support for Bluetooth USB devices into the
 	  kernel or say M to compile it as module (btusb).
