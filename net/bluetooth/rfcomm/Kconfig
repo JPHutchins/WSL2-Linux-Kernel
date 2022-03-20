@@ -2,6 +2,7 @@
 config BT_RFCOMM
 	tristate "RFCOMM protocol support"
 	depends on BT_BREDR
+    default m
 	help
 	  RFCOMM provides connection oriented stream transport.  RFCOMM
 	  support is required for Dialup Networking, OBEX and other Bluetooth
@@ -14,6 +15,7 @@ config BT_RFCOMM_TTY
 	bool "RFCOMM TTY support"
 	depends on BT_RFCOMM
 	depends on TTY
+    default y
 	help
 	  This option enables TTY emulation support for RFCOMM channels.
 
